@@ -45,7 +45,7 @@ belirleyemediğim için bağımlı değişken olan Yield_kg_per_hectare
 verisini bu işleme sokmadım.
 
 Düzenlenmiş veri
-seti:[agricultural_yield](https://drive.google.com/file/d/1HsFb9ZiuRqXHNGtZFF6sCf1AddO2-dTc/view?usp=drive_link)
+seti: [agricultural_yield](https://drive.google.com/file/d/1HsFb9ZiuRqXHNGtZFF6sCf1AddO2-dTc/view?usp=drive_link)
 
 Tarımsal verim tahmini için hazırlanmış sentetik bir veri seti
 inceliyoruz. Veri setinin, toprak kalitesi(50-100), tohum
@@ -205,18 +205,18 @@ summary(model1)
     ## Multiple R-squared:   0.16,  Adjusted R-squared:  0.1598 
     ## F-statistic: 761.5 on 4 and 15995 DF,  p-value: < 2.2e-16
 
-Model sonuçları incelendiğinde ***$R^{2}$ $\approx$ 0.16*** olarak elde
-edilmiştir. ***$R^{2}$*** değeri küçüktür.(Veriyi seçtikten sonra bu
-aşamada anlamlılığı yeterli buldum sanırım fakat ***$R^{2}$*** değeri
+Model sonuçları incelendiğinde $R^2$ $\approx$ 0.16 olarak elde
+edilmiştir. $R^2$ değeri küçüktür.(Veriyi seçtikten sonra bu
+aşamada anlamlılığı yeterli buldum sanırım fakat $R^2$ değeri
 modelin iyi tahminlerde bulunamayabileceğini gösteriyor.) Bunun yanısıra
-model anlamlı çıkmıştır***(p\<2.2e−16)***. Tüm değişkenlerin anlamlı
+model anlamlı çıkmıştır *(p\<2.2e−16)*. Tüm değişkenlerin anlamlı
 olduğu görülmektedir(\*\*\*).
 
 Modeli grafikler üzerinden inceleyelim.
 ![](Çoklu-Doğrusal-Regresyon-ile-Tarımsal-Verim-Analizi_files/figure-gfm/plot_model1-1.png)<!-- -->![](Çoklu-Doğrusal-Regresyon-ile-Tarımsal-Verim-Analizi_files/figure-gfm/plot_model1-2.png)<!-- -->
 
-**Residuals vs Fitted:** x ekseninde fitted(***$\hat{y}$***) ve y
-ekseninde residuals(***$y$-$\hat{y}$***) değerleri olan bu grafik
+**Residuals vs Fitted:** x ekseninde fitted($\hat{y}$) ve y
+ekseninde residuals($y - \hat{y}$) değerleri olan bu grafik
 modelin doğrusallığını ve varyansın homojenliğini(homoscedasticity)
 tespit etmekte kullanılır. model1’in Residuals vs Fitted grafiğini
 incelediğimizde kırmızı model çizgisinin 0 üzerinde bozulmadan gittiğini
@@ -239,7 +239,7 @@ model1’in bu grafiğe residuals vs fitted grafiğine benzer şekilde
 uyduğunu görebiliyoruz.
 
 **Residuals vs Leverage:** Doğrusal regresyon için
-fitted(***$\hat{y}_{i}$***) değerin gerçek(***$y_{i}$***) değerdeki
+fitted($\hat{y}_i$) değerin gerçek($y_i$) değerdeki
 değişime olan hassasiyetini(leverage) ölçmede kullanılır. Model,
 leverage arttıkça standartlaştırılmış artık değerlerin dağılımının nasıl
 değiştiğini gösterir. Heteroskedasticity ve nonlineer’liğin tespit
@@ -400,7 +400,7 @@ summary(model2)
     ## F-statistic: 909.3 on 4 and 14625 DF,  p-value: < 2.2e-16
 
 model2’nin ***Residual standard error*** değeri model1’inkinden
-küçüktür. model2’nin ***$R^{2}$*** değeri model1’inkinden büyüktür.
+küçüktür. model2’nin $R^2$ değeri model1’inkinden büyüktür.
 model2, model1’den daha iyi görünmektedir.
 
 ``` r
@@ -433,9 +433,9 @@ BIC(model2)
 model2’nin BIC değeri model1’inkinden küçüktür. model2, model1’den daha
 iyidir.
 
-model1’in ***$R^{2}$*** değerinin daha iyi çıkmasının nedeni gözlem
+model1’in $R^2$ değerinin daha iyi çıkmasının nedeni gözlem
 sayısının fazlalığından kaynaklı olabilir. Gözlem sayısı arttıkça
-***$R^{2}$*** değeri yükselme eğilimindedir.
+$R^2$ değeri yükselme eğilimindedir.
 
 ## Test Seti üzerinden model değerlendirme
 
@@ -458,7 +458,7 @@ R2(predictions2, testset$Yield_kg_per_hectare)
 
     ## [1] 0.1886366
 
-model2’nin ***$R^{2}$*** değeri model1’inkinden küçüktür. model1,
+model2’nin $R^2$ değeri model1’inkinden küçüktür. model1,
 model2’den çok az da olsa daha iyidir.
 
 ``` r
@@ -592,8 +592,8 @@ dwtest(Yield_kg_per_hectare ~ Soil_Quality+Rainfall_mm+Fertilizer_Amount_kg_per_
     ## DW = 1.9745, p-value = 0.06146
     ## alternative hypothesis: true autocorrelation is greater than 0
 
-Hipotez, ‘*$H_{0}$*:Hatalar arasında korelasyon yoktur’ şeklinde
-kurulur. *p-value* değerlendirildiğinde *$H_{0}$* hipotezi rededdilemez.
+Hipotez, ‘ $H_0$:Hatalar arasında korelasyon yoktur.’ şeklinde
+kurulur. *p-value* değerlendirildiğinde $H_0$ hipotezi rededdilemez.
 Yani hatalar arasında korelasyon olmadığı görülür. Hesaplanan d, 0 ile 4
 arasında değer almaktadır. d değeri 2’ye yakın olduğundan otokorelasyon
 olmadığına işaret eder.
@@ -610,6 +610,6 @@ lmtest::bgtest(model2, order = 3)
     ## data:  model2
     ## LM test = 3.4951, df = 3, p-value = 0.3214
 
-Hipotez, ‘*$H_{0}$*:Hatalar arasında korelasyon yoktur’ şeklinde
-kurulur. *p-value* değerlendirildiğinde *$H_{0}$* hipotezi rededdilemez.
+Hipotez, ‘ $H_0$:Hatalar arasında korelasyon yoktur.’ şeklinde
+kurulur. *p-value* değerlendirildiğinde $H_0$ hipotezi rededdilemez.
 Yani hatalar arasında korelasyon olmadığı görülür.
