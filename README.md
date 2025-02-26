@@ -6,9 +6,9 @@ This is an assignment for my Regression Analysis course.
 Performing multiple linear regression analysis on agricultural data to predict the yield.
 
 - Missing value analysis
-- Outlier Analysis
+- Outlier analysis
 - Model evaluation
-- Multicollinearity Test
+- Multicollinearity test
 - Autocorrelation tests
 
 **Data Set**  
