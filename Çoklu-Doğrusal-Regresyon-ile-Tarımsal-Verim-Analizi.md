@@ -3,6 +3,7 @@
 Edanur Yılmaz,
 2023-11-26
 
+## İçerik
 - [Veri İnceleme](#veri-i̇nceleme)
 - [Kayıp Gözlemler](#kayıp-gözlemler)
 - [Model Oluşturma](#model-oluşturma)
@@ -31,8 +32,7 @@ library(lmtest)
 ```
 
 ## Veri İnceleme
-
-<font size="2"><a href="#top">İçeriğe dön.</a></font>
+<sup>[İçeriğe dön.](#İçerik)</sup>
 
 Kaynak veri seti: [Synthetic Agricultural Yield Prediction
 Dataset](https://www.kaggle.com/datasets/blueloki/synthetic-agricultural-yield-prediction-dataset)
@@ -123,8 +123,7 @@ düşük olduğunu söylemek zor. Bağımsız değişkenlerin bağımlı değiş
 aralarındaki ilişkinin anlamlı olduğunu(\*\*\*) görebiliyoruz.
 
 ## Kayıp Gözlemler
-
-<font size="2"><a href="#top">İçeriğe dön.</a></font>
+<sup>[İçeriğe dön.](#İçerik)</sup>
 
 ``` r
 plot_pattern(agricultural_yield, square=FALSE, rotate=TRUE)
@@ -159,8 +158,7 @@ sum(is.na(agricultural_yield_Imp))
 Bu işlemden sonra NA değeri kalmadığını görebiliyoruz.
 
 ## Model Oluşturma
-
-<font size="2"><a href="#top">İçeriğe dön.</a></font>
+<sup>[İçeriğe dön.](#İçerik)</sup>
 
 Modelimizin iyi çalışıp çalışmadığını deneyebilmek için eğitim ve test
 setlerine ihtiyacımız var. Eğitim ve test setleri oluşturmak için veri
@@ -261,8 +259,7 @@ değerde olduğunu görüyoruz. Model Cook’s distance çizgilerinin
 içindedir.
 
 ## Aykırı Değer Kontrolü
-
-<font size="2"><a href="#top">İçeriğe dön.</a></font>
+<sup>[İçeriğe dön.](#İçerik)</sup>
 
 Aykırı değerleri bulmak için Cook’s distance kullanalım.
 Uzaklığı(distance) bulmak için iki ölçüt vardır.
@@ -333,8 +330,7 @@ nrow(trainsetrem)
     ## [1] 14630
 
 ## Model Karşılaştırması
-
-<font size="2"><a href="#top">İçeriğe dön.</a></font>
+<sup>[İçeriğe dön.](#İçerik)</sup>
 
 Aykırı değerlerden arınmış değerlerle yeni bir model oluşturalım.
 
@@ -438,8 +434,7 @@ sayısının fazlalığından kaynaklı olabilir. Gözlem sayısı arttıkça
 $R^2$ değeri yükselme eğilimindedir.
 
 ## Test Seti üzerinden model değerlendirme
-
-<font size="2"><a href="#top">İçeriğe dön.</a></font>
+<sup>[İçeriğe dön.](#İçerik)</sup>
 
 ``` r
 predictions1<-predict(model1, testset)
@@ -513,8 +508,7 @@ daha kötü. Bu noktada belki k_fold cross validation yapılıp sonuçlar
 yeniden değerlendirilebilir.
 
 ## Çoklu Bağlantı Sorunu (Multicollinearity)
-
-<font size="2"><a href="#top">İçeriğe dön.</a></font>
+<sup>[İçeriğe dön.](#İçerik)</sup>
 
 Bağımsız değişkenlerin birbirleriyle yüksek dereceli ilşkileri varsa
 çoklu bağlantı sorunu(multicollinearity) ile karşılaşılabilir. İlk
@@ -534,8 +528,7 @@ VIF değerleri 10’un çok altında bir değere sahip. Çoklu bağlantı
 sorunu(multicollinearity) yoktur.
 
 ## İlişkili Hatalar
-
-<font size="2"><a href="#top">İçeriğe dön.</a></font>
+<sup>[İçeriğe dön.](#İçerik)</sup>
 
 Doğrusal regresyon modellerinde en küçük kareler yönteminin başarılı bir
 biçimde uygulanıp istenilen sonuçları verebilmesi için bazı
